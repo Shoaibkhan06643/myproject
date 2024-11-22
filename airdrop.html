@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Try It Yourself</title>
+<style>
+body{background-color: black; color: white;}
+
+.homepng{
+         width: 27px;
+         position: fixed;
+         top: 581.5px;
+         left: 40px;
+}
+.earnpng{
+         width: 28.8px;
+         position: fixed;
+         top: 581px;
+         left: 163px;
+}
+.airdroppng{
+         width: 26px;
+         position: fixed;
+         top: 584px;
+         left: 290px;
+}
+.hometext{
+         width: 26px;
+         position:fixed;
+         top: 590px;
+         left: 35px;
+         color: #808080;
+}
+.earntext{
+         width: 26px;
+         position: fixed;
+         top: 590px;
+         left: 163px;
+         color: #808080;
+}
+
+.airdroptext{
+         width: 27px;
+         position: fixed;
+         top: 590px;
+         left: 282px;
+         color: #808080;
+}
+#navo{
+      text-decoration: none;
+      position : fixed;
+      color: White;
+      left: 5px;
+      top: 547px;
+      background-color: #202020;
+      padding: 10px;
+      width: 330px;
+      height: 65px;
+      border-radius: 0px;
+      border: 1px solid #101010;
+}
+.Near{
+      Position: absolute;
+      left: 48px;
+      top: 140px;
+      font-size: 39px;
+      color: orange;
+
+}
+#dash{
+     position: absolute;
+     top: 230px;    
+     
+}
+.nearpng{
+      width: 130px;
+      position: absolute;
+      left: 107px;
+      
+}
+.listing{
+     position: absolute;
+     top: 210px;
+     background-color: black;
+     left: 125px;
+     padding: 5px;
+}
+.date{
+     position: absolute;
+     top: 245px;
+     left: 95px;
+}
+#spacer{
+     position: absolute;
+     top: 1000px;
+     color: black;
+}
+.rej{
+     position: absolute;
+     top: 320px;
+     left: 82px;
+     font-size: 20px;
+     color: silver 
+}
+
+/* Set Background color of the body */
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container for stacking boxes vertically */
+    .container {
+      position: relative;
+      top: 355px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 325px;
+      margin: auto;
+    }
+
+    /* Box Styling */
+    .option-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 0.9px solid #777; /* Lighter border color */
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #222; /* Dark background for each box */
+      transition: all 0.3s ease;
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    /* Fade out all other boxes except the active one */
+    .container .option-box.faded {
+      opacity: 0.4;
+    }
+
+    /* Highlighted & Expanded Box */
+    .option-box.active {
+      box-shadow: 0 0 10px rgba(0, 239, 755, 0.5);
+      border-color: #999;
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    
+    /* Back Arrow Styling */
+    .back-arrow {
+      position: absolute;
+      bottom: 8px;
+      right: 13px;
+      font-size: 1.2em;
+      color: #fff; /* White color for the back arrow */
+      cursor: pointer;
+      display: none; /* Hidden by default */
+    }
+
+    /* Display Back Arrow when active */
+    .option-box.active .back-arrow {
+      display: inline;
+    }
+
+    /* Image Styling */
+    .option-box img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    /* Center Image when active */
+    .option-box.active img {
+      width: 60px;
+      height: 60px;
+      margin: 0 0 10px 0;
+    }
+
+    /* Main Text Styling */
+    .content h3 {
+      margin: 10px 0;
+      font-size: 1.1em;
+      text-align: center;
+      color: #fff; /* White color for text */
+    }
+
+    /* Buttons */
+    .buttons {
+      display: none; /* Hidden by default */
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+    
+    /* Display Buttons when active */
+    .option-box.active .buttons {
+      display: flex;
+    }
+
+    .register-btn {
+      padding: 8px;
+      background-color: #0073ff;
+      color: white;
+      font-size: 0.9em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      width: 395px;
+      max-width: 200px;
+    }
+
+    /* Referral Code Section */
+    .referral-section {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.9em;
+      color: #ddd; /* Lighter text for referral */
+    }
+
+    /* Copy Button */
+    .copy-btn {
+      background-color: white;
+      color: blue;
+      padding: 5px 9px;
+      font-size: 0.8em;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+
+} 
+</style>
+</head>
+<body>
+ 
+  <h4 id="spacer">h</h4>
+
+   
+
+<img class="nearpng" src="airdropi.png"/>
+<h1 class="Near">Airdrop is Near</h1>
+<header id="dash">_________________________________________________</header>
+<h3 class="listing">Listing Date<h3>
+<h2 class="date">December, 2024<h2>
+<h2 class="rej">Register an Exchange</h2>
+<div>
+
+
+
+
+
+
+<div class="container">
+  <!-- Five Option Boxes -->
+  <div class="option-box" onclick="toggleActiveBox(event, this)">
+    <span class="back-arrow" onclick="toggleActiveBox(event, this.parentElement)"></span>
+    <img src="binance.png" alt="Binance">
+    <div class="content">
+      <h3>Binance Exchange</h3>
+    </div>
+    <div class="buttons">
+      <a href="https://www.binance.com/en/register"><button class="register-btn"><b>Register Now</b></button></a>
+      <div class="referral-section">
+       <b>Ref Code: 800yihgf751</b>
+        <button class="copy-btn" onclick="copyRefCode('RH4ZG8OE')"><b>Copy</b></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repeat the boxes four more times with the same structure -->
+  <div class="option-box" onclick="toggleActiveBox(event, this)">
+    <span class="back-arrow" onclick="toggleActiveBox(event, this.parentElement)"></span>
+    <img src="bybit.png" alt="Binance">
+    <div class="content">
+      <h3>Bybit Exchange</h3>
+    </div>
+    <div class="buttons">
+      <a href="https://www.bybit.com/register"><button class="register-btn"><b>Register Now</b></button></a>
+      <div class="referral-section">
+       <b>Ref Code: 225nbxzf225</b>
+        <button class="copy-btn" onclick="copyRefCode('BET666')"><b>Copy</b></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="option-box" onclick="toggleActiveBox(event, this)">
+    <span class="back-arrow" onclick="toggleActiveBox(event, this.parentElement)"></span>
+    <img src="bitget.png" alt="Binance">
+    <div class="content">
+      <h3>Bitget Exchange</h3>
+    </div>
+    <div class="buttons">
+      <a href="https://www.bitget.com/register"><button class="register-btn"><b>Register Now</b></button></a>
+      <div class="referral-section">
+        <b>Ref Code: 512kmwgf525</b>
+        <button class="copy-btn" onclick="copyRefCode('wgiw0650')"><b>Copy</b></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="option-box" onclick="toggleActiveBox(event, this)">
+    <span class="back-arrow" onclick="toggleActiveBox(event, this.parentElement)"></span>
+    <img src="okx.png" alt="Binance">
+    <div class="content">
+      <h3>OKX Exchange</h3>
+    </div>
+    <div class="buttons">
+      <a href="https://www.okx.com/register"><button class="register-btn"><b>Register Now</b></button></a>
+      <div class="referral-section">
+       <b>Ref Code: 325srwsd695</b>
+        <button class="copy-btn" onclick="copyRefCode('OKCODEX')"><b>Copy</b></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="option-box" onclick="toggleActiveBox(event, this)">
+    <span class="back-arrow" onclick="toggleActiveBox(event, this.parentElement)"></span>
+    <img src="gatio.png" alt="Binance">
+    <div class="content">
+      <h3>Gate.io Exchange</h3>
+    </div>
+    <div class="buttons">
+      <a href="https://www.gate.io/signup"><button class="register-btn"><b>Register Now</b></button></a>
+      <div class="referral-section">
+        <b>Ref Code: 625ylwof425</b>
+        <button class="copy-btn" onclick="copyRefCode('GATECODE')"><b>Copy</b></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+<head><h1 id="navo"></h1></head>
+</header>
+
+
+
+<h5 class="hometext">Home</h5>
+<h5 class="earntext">Earn</h5>
+<h5 class="airdroptext">Airdrop</h5>
+
+<header class="header">
+<nav>
+<div> 
+<a href="index.html"><img class="homepng" src="home.png"/></a>
+</div>
+
+<div> 
+<a href="earn.html"><img class="earnpng" src="earn.png"/></a>
+</div>
+
+<div>
+<img class="airdroppng" src="airdrop.png"/>
+</div></nav>
+</header>
+
+
+
+<script>
+  // Function to toggle the active state of a box and fade out others
+  function toggleActiveBox(event, element) {
+    event.stopPropagation(); // Prevent event from bubbling up
+
+    // Remove active class and fade out from all boxes
+    const boxes = document.querySelectorAll('.option-box');
+    boxes.forEach(box => {
+      if (box !== element) {
+        box.classList.remove('active');
+        box.classList.add('faded');
+      }
+    });
+
+    // Toggle the active class on the clicked box
+    element.classList.toggle('active');
+    element.classList.remove('faded'); // Remove faded class from the active box
+  }
+
+  // Copy referral code to clipboard
+  function copyRefCode(refCode) {
+    navigator.clipboard.writeText(refCode).then(() => {
+      alert("Referral code copied!");
+    }).catch(err => {
+      console.error("Failed to copy text: ", err);
+    });
+  }
+ </script>
+</body>
+</html>
+
+
+
+
+
+
